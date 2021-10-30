@@ -1,0 +1,56 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body th:align="center">
+	<h1>회원 가입</h1>
+	<form th:action="add" method="post">
+		<hr>
+		<table th:align="center" border="1" th:cellpadding="0"
+			th:cellspacing="0">
+			<tr>
+				<td bgcolor="orange" th:text="아이디"></td>
+				<td><input name="id" type="text" size="10"></td>
+				<td><input type="button" onclick="" value="중복확인"></td>
+			</tr>
+			<tr>
+				<td bgcolor="orange" th:text="이름"></td>
+				<td><input name="name" type="text" size="10"></td>
+			</tr>
+			<tr>
+				<td bgcolor="orange" th:text="비밀번호"></td>
+				<td><input name="password" type="password" size="10"></td>
+			</tr>
+			<tr>
+				<td bgcolor="orange" th:text="이메일"></td>
+				<td><input name="email" type="text" size="10"></td>
+			</tr>
+			<tr>
+				<td bgcolor="orange" th:text="핸드폰번호"></td>
+				<td><input name="phonenum" type="text" size="10"></td>
+			</tr>
+			<tr>
+				<td bgcolor="orange" th:text="주소"></td>
+				<td><input name="address" type="text" size="10"></td>
+			</tr>
+			<tr>
+				<td bgcolor="orange" th:text="질문"></td>
+				<td><select name='question'>
+						<option value="sc1">초등학교 이름은?</option>
+						<option value="sc2">중학교 이름은?</option>
+						<option value="sc3">고등학교 이름은?</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td bgcolor="orange" th:text="답변"></td>
+				<td><input name="answer" type="text" size="10"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" onclick="location.href='login'"
+					value="회원 가입"></td>
+				<td><input type="button" onclick='history.back(-1)' value="취소"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
