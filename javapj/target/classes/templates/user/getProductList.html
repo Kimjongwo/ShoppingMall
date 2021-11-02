@@ -1,0 +1,40 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>상품 목록</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<body th:align="center">
+<h1>상품 목록</h1>
+<hr>
+<!--  
+<table th:align="center" border="1" th:cellpadding="0" th:cellspacing="0" th:width="700">
+<tr>
+	<th bgcolor="orange" width="100">id</th>
+	<th bgcolor="orange" width="100">address</th>
+	<th bgcolor="orange" width="100" >age</th>
+</tr>
+ 
+<tr th:each="product : ${plist}">
+	<td><a th:href="@{/user/getUser(id=${user.id})}" th:text="${user.id}"></a></td>
+	<td th:text="${user.address}" th:align="center">
+	<td th:text="${product.price}" th:align="center">
+	<td th:text="${product.pname}" th:align="center">
+	<td><img src="/img/아우터(${product.pname}).jpg" alt="첼시부츠" width="100" height="100" /></td>
+</tr>
+-->
+<table cellspacing="50" cellpadding="0" border="1" bordercolor="linen">
+			<h2>아우터</h2>
+			<tr th:each="product : ${plist}">
+			<td><img th:src="/img/${product.pname}.jpg" alt="셔츠" width="200" height="200" /></td>
+			<td><img th:src= "@{/img/} + ${product.pname} +{.jpg}" width="200" height="200" /></td>
+			<td th:text="${product.price}" th:align="center">
+			<td th:text="${product.pname}" th:align="center">
+			</tr>
+		</table>
+
+
+<br>
+</body>
+</html>
